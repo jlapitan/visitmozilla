@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <head>
-	<title>Mozilla Philippines Community - Visit Mozilla Community Space Manila</title>
-	<meta name="viewport" content="width=device-width,user-scalable:no, initial-scale:1">
-	<link href="css/reset.css" media="all" rel="stylesheet" />
-	<link href="css/main.css" media="all" rel="stylesheet" />
-	<link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />
+    <title>Mozilla Philippines Community - Visit Mozilla Community Space Manila</title>
+    <meta name="viewport" content="width=device-width,user-scalable:no, initial-scale:1">
+    <link href="css/reset.css" media="all" rel="stylesheet" />
+    <link href="css/main.css" media="all" rel="stylesheet" />
+    <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -21,7 +21,7 @@
         
         <form>
             <input type="text" id="visitDate" name="visitDate" placeholder="Date of Visit" required />
-            <select name="visitTime">
+<!--             <select name="visitTime">
                 <option selected>Time of Arrival</option>
                 <option value="">8:00 AM</option>
                 <option value="">8:30 AM</option>
@@ -50,7 +50,9 @@
                 <option value="">8:00 PM</option>
                 <option value="">8:30 PM</option>
                 <option value="">9:00 PM</option>
-            </select>          
+            </select>   -->
+
+            <input type="text" placeholder="Time of Arrival" id="visitTime" />
             <select>
                 <option selected>Title</option>
                 <option value="">Mr.</option>
@@ -100,8 +102,10 @@
 <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script>
 $(function(){
-$('#visitDate').datepicker({ minDate:0});
-//add minDate
+    $('#visitDate').datepicker({ minDate:0});
+    //add minDate
+
+    $('#visitTime').timepicker();
 });
 </script>
 <!-- END -->
